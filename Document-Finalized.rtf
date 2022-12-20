@@ -1,0 +1,157 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qj\b\f0\fs36\lang9 Cab Management System\b0\fs28\par
+1. INTRODUCTION\par
+Car and bus travel agencies need an effective management platform for handling their respective transportation services. The existing system relies on manual data recording for management which is very tedious and time-consuming, involving a lot of manpower and paperwork. So, the current system needs to be computerized and web-based.This project aims at offering the best of cab services to clients in need. It has a fleet of cabs ranging from normal budget cabs to expensive luxury cabs. A good feature of a web-based system such as this is that it offers online cab hire for corporate houses. This makes the overall car service work easily accessible for all and reliable as well.\par
+1.1 Purpose\par
+The purpose of this document is to build an online system to manage cabs and customers to ease the cab management.The cab  management system is to ease cab management and to create a convenient and easy-to-use application for passengers, trying to easily book the cab. The system is based on a relational database with its cab management and booking functions  \par
+1.2 Project Scope \par
+The system ensures that the users can book the cab as per their requirements by logging on to the website. It allows users to book their cabs online, manage their bookings and cancel their bookings at any point of time. Regular updates are provided to the customer so that they are aware of their bookings, driver details, and booking status. The user can also drop in their suggestions or queries in the feedback form.\par
+1.3 Functional Requirements\par
+     Actors\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\qj Customers\par
+{\pntext\f0 ii.\tab}Drivers\par
+{\pntext\f0 iii.\tab}Admin\par
+
+\pard\sa200\sl276\slmult1\qj Customers \par
+    1.1 Register\par
+            The customer should create a profile . It is not manadatory for fill all the profile details such as address , date of birth , gender .. etc . The customer can enter the address along with PIN and state, DoB and click the sumbit button . Name field should not include any characters or number . Seperate fields can be provided for First name and Last name . It should be marked as manadatory field.The phone number must be unique and it require maximum of 10 numbers with country code and also it should not be start with zero or any other special character .  Validate the phone number with an OTP . And email must be unique and valid  , it should validated using OTP .Password should consist of min of 8 characters including uppercases, lowercases, special characters and numbers.Another manadatory field is role - customer or  driver .\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj First Name -  Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Last name - Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Phone number - Unique , maximum of 10 numbers +  Country code\par
+{\pntext\f1\'B7\tab}Email - Unique , valid\par
+{\pntext\f1\'B7\tab}Password - Required , min length (8) include special characters , uppercases , lowercases and number\par
+{\pntext\f1\'B7\tab}DoB - date\par
+{\pntext\f1\'B7\tab}Address - Min length(100)\par
+
+\pard\sa200\sl276\slmult1\qj\par
+   1.2 Login Page\par
+              The customer shall enter the user name as either email ID or phone number and password and click the submit button to login to the App . Check for valid email ID and phone number .The phone number must be unique and it require maximum of 10 numbers with country code and also it should not be start with zero or any other special character . Password should consist of min of 8 characters including uppercases, lowercases, special characters and numbers.Captcha should be provided containing  4-6 letters or numbers.If the customer forgot the password  can be click the FORGOT PASSWORD button to reset the password. The customer shall receive an OTP in email and phone number . The customer shall enter the OTP and click submit . Then , the customer shall enter the new right combination password two times and click update to reset the password .\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Phone number - Unique , maximum of 10 numbers +  Country code\par
+{\pntext\f1\'B7\tab}Email - Unique , valid\par
+{\pntext\f1\'B7\tab}Password - Required , min length (8) include special characters , uppercases , lowercases and number\par
+
+\pard\sa200\sl276\slmult1\qj\par
+    1.3 Searching\par
+                  The customer shall be search the available cabs for there locations  , with  a given  a pick up location and destination. Also the customer can search the cab with there type .\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj field  - searching  field , with alphanumeric characters , min length(40)\par
+
+\pard\sa200\sl276\slmult1\qj    1.4 Booking\par
+                 After checking the number of cab available the customers books a cab or number of cabs according to their requirements.\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Date -DD/MM/YYYY format\par
+{\pntext\f1\'B7\tab}Time -HH:MM format\par
+{\pntext\f1\'B7\tab}pick up location - alphanumeric characters , max length(40)\par
+{\pntext\f1\'B7\tab}destination - alphanumeric characters , max length(40)\par
+
+\pard\sa200\sl276\slmult1\qj    1.5  Payment\par
+                  After the booking , the customer receive a confirmation from the driver  with details of the fare  . Customer make payments and deposits (optional)online with their credit / debit card .\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj credit / debit card - mandatory field , numeric characters , length(12)\par
+{\pntext\f1\'B7\tab}CVV - mandatory field ,numeric characters,length(3)\par
+{\pntext\f1\'B7\tab}Amount -  mandatory field ,numeric characters, max length(5)\par
+{\pntext\f1\'B7\tab}OTP - mandatory field ,numeric characters,length(3)\par
+
+\pard\sa200\sl276\slmult1\qj\par
+  1.6 Cancellation and refund\par
+                 If the customer want to cancel the cab then 10% of the amount per person is deducted if the booking is cancelled before 30 mins of the service time and they have to provide the reason for the cancellation .The balance  payment or deposit must refunded with in a time limit .\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj reason - mandatory field , alphanumeric characters , max length(100)\par
+
+\pard\sa200\sl276\slmult1\qj   1.7 Feedback\par
+           Customer able to provide rating for driver as well as overall services\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj   feedback - mandatory field , alphanumeric characters , max length(100)\par
+
+\pard\sa200\sl276\slmult1\qj\par
+Drivers\par
+2.1 Register\par
+                  The driver should create a profile . Name field should not include any characters or number . Seperate fields can be provided for First name and Last name . It should be marked as manadatory field.The phone number must be unique and it require maximum of 10 numbers with country code and also it should not be start with zero or any other special character .  Validate the phone number with an OTP . And email must be unique and valid  , it should validated using OTP .Password should consist of min of 8 characters including uppercases, lowercases, special characters and numbers.It is manadatory for fill all the profile details such as address , date of birth , gender .. etc . .Another manadatory field is role - customer or  driver . \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj First Name -  Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Last name - Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Phone number - Unique , maximum of 10 numbers +  Country code\par
+{\pntext\f1\'B7\tab}Email - Unique , valid\par
+{\pntext\f1\'B7\tab}Password - Required , min length (8) include special characters , uppercases , lowercases and number\par
+{\pntext\f1\'B7\tab}DoB - date\par
+{\pntext\f1\'B7\tab}Address - Min length(100)\par
+
+\pard\sa200\sl276\slmult1\qj 2.2 Profile \par
+In this page , the driver have to add some details  such as license number , cab number , cab model  ,otherthan license some Id proof .\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj license number - Unique , numeric characters ,length(12)\par
+{\pntext\f1\'B7\tab}cab model - Required , min length(10), alphanumeric\par
+{\pntext\f1\'B7\tab}cab number - Required , min length(10), alphanumeric\par
+
+\pard\sa200\sl276\slmult1\qj  2.3 Login Page\par
+                  The driver shall enter the user name as either email ID or phone number and password and click the submit button to login to the App . Check for valid email ID and phone number .The phone number must be unique and it require maximum of 10 numbers with country code and also it should not be start with zero or any other special character . Password should consist of min of 8 characters including uppercases, lowercases, special characters and numbers.Captcha should be provided containing  4-6 letters or numbers.If the driver forgot the password  can be click the FORGOT PASSWORD button to reset the password. The driver shall receive an OTP in email and phone number . The driver shall enter the OTP and click submit . Then , the driverr shall enter the new right combination password two times and click update to reset the password \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Phone number - Unique , maximum of 10 numbers +  Country code\par
+{\pntext\f1\'B7\tab}Email - Unique , valid\par
+{\pntext\f1\'B7\tab}Password - Required , min length (8) include special characters , uppercases , lowercases and number\par
+
+\pard\sa200\sl276\slmult1\qj\par
+ 2.4 View the booking\par
+           Driver can see all booking \par
+  2.5 Accept the booking\par
+             After  viewing the booking , driver  have an option to accept or reject the booking  \par
+
+\pard\ri-306\sa200\sl276\slmult1\qj 2.6 Cancellation\par
+
+\pard\sa200\sl276\slmult1\qj              Driver have an option to cancel the trip if the customer cancel the trip.\par
+\par
+\fs32 3 . Admin\fs28\par
+ 3.1 Login Page \par
+                     Admin shall enter the user name as either email ID or phone number and password and click the submit button to login to the app . Check for valid email ID and phone number .The phone number must be unique and it require maximum of 10 numbers with country code and also it should not be start with zero or any other special character . Password should consist of min of 8 characters including uppercases, lowercases, special characters and numbers.Captcha should be provided containing  4-6 letters or numbers.\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Phone number - Unique , maximum of 10 numbers +  Country code\par
+{\pntext\f1\'B7\tab}Email - Unique , valid\par
+{\pntext\f1\'B7\tab}Password - Required , min length (8) include special characters , uppercases , lowercases and number\par
+
+\pard\sa200\sl276\slmult1\qj\par
+ 3.2 Views in  the booking\par
+                   Admin can see all booking booked by the customer .And also  able to see feedbacks along with customer  name. Admin can view the customer feedback and customer details  such as :\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj First Name -  Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Last name - Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Phone number - Unique , maximum of 10 numbers +  Country code\par
+{\pntext\f1\'B7\tab}Email - Unique , valid\par
+{\pntext\f1\'B7\tab}DoB - date\par
+{\pntext\f1\'B7\tab}Address - Min length(100)\par
+
+\pard\sa200\sl276\slmult1\qj  3.3 Updation\par
+                     Add new cabs and drivers after validating information about the cab and driver .\par
+New driver details such as :\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj First Name -  Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Last name - Cannot include any character or number , required min length (10) , max length (20) \par
+{\pntext\f1\'B7\tab}Phone number - Unique , maximum of 10 numbers +  Country code\par
+{\pntext\f1\'B7\tab}Email - Unique , valid\par
+{\pntext\f1\'B7\tab}DoB - date\par
+{\pntext\f1\'B7\tab}Address - Min length(100)\par
+{\pntext\f1\'B7\tab}license number - Unique , numeric characters ,length(12)\par
+{\pntext\f1\'B7\tab}cab model - Required , min length(10), alphanumeric\par
+{\pntext\f1\'B7\tab}cab number - Required , min length(10), alphanumeric\par
+
+\pard\sa200\sl276\slmult1\qj 3.4  Search the  booking\par
+In this page , admin can search the booking in daily or weekly based on the date and time .\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj Date -DD/MM/YYYY format\par
+{\pntext\f1\'B7\tab}Time -HH:MM format\par
+
+\pard\sa200\sl276\slmult1\qj\par
+ \par
+\par
+\par
+\par
+ \par
+\par
+\fs22\par
+}
+ 
